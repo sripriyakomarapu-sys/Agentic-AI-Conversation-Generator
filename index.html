@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agentic AI Conversation Generator</title>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav>
+
+<h2>Agentic AI Conversation Generator</h2>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#generator">Generator</a></li>
+
+<li><a href="#documentation">Documentation</a></li>
+
+<li><a href="#sample">Sample Run</a></li>
+
+</ul>
+
+</nav>
+
+<!-- Hero Section -->
+
+<section id="home">
+
+<h1>Agentic AI Conversation Generator</h1>
+
+<p>
+Generate realistic Agentic AI workflow simulations
+for planning, analysis, research, and execution tasks.
+</p>
+
+</section>
+
+<!-- Generator -->
+
+<section id="generator">
+
+<h2><i class="fas fa-robot"></i> Generate Prompt</h2>
+
+<label>Scenario</label>
+
+<input type="text"
+id="scenario"
+placeholder="Project Planning">
+
+<br><br>
+
+<label>Goal</label>
+
+<input type="text"
+id="goal"
+placeholder="Launch Company Website">
+
+<br><br>
+
+<label>Agent Persona</label>
+
+<select id="persona">
+
+<option>Project Manager</option>
+
+<option>Data Analyst</option>
+
+<option>Marketing Strategist</option>
+
+<option>Research Assistant</option>
+
+<option>Customer Support Agent</option>
+
+</select>
+
+<br><br>
+
+<h3>Available Tools</h3>
+
+<input type="checkbox" value="Email" class="tool">
+<label>Email</label>
+
+<br>
+
+<input type="checkbox" value="Calendar" class="tool">
+<label>Calendar</label>
+
+<br>
+
+<input type="checkbox" value="Documents" class="tool">
+<label>Documents</label>
+
+<br>
+
+<input type="checkbox" value="Spreadsheet" class="tool">
+<label>Spreadsheet</label>
+
+<br>
+
+<input type="checkbox" value="Web Search" class="tool">
+<label>Web Search</label>
+
+<br><br>
+
+<label>Tone</label>
+
+<select id="tone">
+
+<option>Professional</option>
+
+<option>Friendly</option>
+
+<option>Formal</option>
+
+<option>Analytical</option>
+
+</select>
+
+<br><br>
+
+<label>Number of Steps</label>
+
+<select id="steps">
+
+<option>3</option>
+
+<option>5</option>
+
+<option>7</option>
+
+<option>10</option>
+
+</select>
+
+<br><br>
+
+<button onclick="generatePrompt()">
+Generate Prompt
+</button>
+
+</section>
+
+<!-- Output -->
+
+<section>
+
+<h2>Generated Prompt</h2>
+
+<textarea
+id="output"
+rows="15"
+cols="80">
+</textarea>
+
+<br><br>
+
+<button onclick="copyPrompt()">
+Copy Prompt
+</button>
+
+</section>
+<section id="documentation">
+
+<h2><i class="fas fa-book"></i> Project Documentation</h2>
+
+<h3>Why These Input Fields?</h3>
+
+<p><strong>Scenario:</strong> Defines the context in which the agent operates.</p>
+
+<p><strong>Goal:</strong> Specifies the objective the agent must achieve.</p>
+
+<p><strong>Agent Persona:</strong> Ensures consistent behavior throughout the simulation.</p>
+
+<p><strong>Available Tools:</strong> Makes the simulation realistic by defining agent capabilities.</p>
+
+<p><strong>Tone:</strong> Controls communication style.</p>
+
+<p><strong>Number of Steps:</strong> Determines workflow complexity.</p>
+
+</section>
+<section id="prompt-structure">
+
+<h2>Prompt Structure</h2>
+
+<p>The generated prompt instructs the AI to:</p>
+
+<ul>
+
+<li>Adopt a specific agent persona</li>
+
+<li>Understand the goal</li>
+
+<li>Use only available tools</li>
+
+<li>Follow a step-by-step workflow</li>
+
+<li>Explain actions and decisions</li>
+
+<li>Maintain consistency throughout the simulation</li>
+
+</ul>
+
+<p>
+This structure creates a realistic agentic AI experience.
+</p>
+
+</section>
+<section id="tools">
+
+<h2><i class="fas fa-tools"></i> Recommended AI Tools</h2>
+
+<img src="images/chatgpt.png" width="80">
+<h3>ChatGPT</h3>
+<p>Excellent for agent simulations and reasoning.</p>
+
+<img src="images/claude.png" width="80">
+<h3>Claude</h3>
+<p>Strong for long-form multi-step workflows.</p>
+
+<img src="images/gemini.png" width="80">
+<h3>Gemini</h3>
+<p>Useful for business and planning scenarios.</p>
+
+<img src="images/perplexity.png" width="80">
+<h3>Perplexity</h3>
+<p>Helpful when simulations require research tasks.</p>
+
+</section>
+<section id="sample">
+
+<h2><i class="fas fa-flask"></i> Sample Run</h2>
+
+<h3>Sample Input</h3>
+
+<p>
+Scenario: Project Planning<br>
+Goal: Launch Company Website<br>
+Persona: Project Manager<br>
+Tools: Email, Calendar, Documents<br>
+Tone: Professional<br>
+Steps: 5
+</p>
+
+<h3>Generated Prompt</h3>
+
+<p>
+Act as an Agentic AI Assistant.<br>
+Agent Persona: Project Manager.<br>
+Goal: Launch Company Website.<br>
+Use Email, Calendar and Documents.<br>
+Simulate a realistic 5-step workflow.
+</p>
+
+<h3>Resulting AI Output</h3>
+
+<p>
+Step 1:<br>
+Thought Process: Understand project requirements.<br>
+Action Taken: Review project documents.<br>
+Tool Used: Documents.<br>
+Result: Scope defined.<br>
+Next Decision: Schedule kickoff meeting.
+</p>
+
+</section>
+<footer>
+
+<p>Developed by Sripriya Komarapu</p>
+
+<p>© 2025 Agentic AI Conversation Generator</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
